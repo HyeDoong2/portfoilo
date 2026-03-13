@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+
+</head>
+
+<body>
+
+  <header>
+    <h1><a href="index.html">Hyejin</a></h1>
+    <nav>
+      <ul id="gnb">
+        <li><a href="#home">HOME</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#port">PORTFOLIO</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <div id="wrap">
+
+    <!-- SECTION1 -->
+    <section id="home" class="section s1">
+      <div class="container">
+        <h2 class="text">HYEJIN'S<span>PUBLISHER</span></h2>
+        <h2 class="text">PORTFOLIO<span>& DESIGN</span></h2>
+      </div>
+
+      <div class="scroll">
+        HOVER THE TEXT & SCROLL
+      </div>
+    </section>
+
+
+
+    <!-- SECTION2 -->
+
+    <section id="about" class="section s2">
+      <div class="about-wrap fade">
+
+        <!-- 프로필 -->
+        <div class="about-img">
+
+          <img src="img/profile.jpg" class="photo1" alt="profile">
+
+          <div class="color-box"></div>
+
+        </div>
+
+        <!-- 텍스트 -->
+        <div class="about-text">
+
+          <h2>About Me</h2>
+          <p>
+            안녕하세요! 웹 퍼블리셔 & 디자이너를 꿈꾸는 한혜진입니다.<br>
+            디자인을 웹으로 구현하는 과정에 흥미를 느끼며<br>
+            사용자가 편하게 사용할 수 있는 UI/UX를 만들기 위해 공부하고 있습니다.
+          </p>
+
+          <h3>SKILLS</h3>
+          <ul class="skills">
+            <li><img src="img/photoshop.png"></li>
+            <li><img src="img/illustrator.png"></li>
+            <li><img src="img/html.png"></li>
+            <li><img src="img/css.png"></li>
+            <li><img src="img/js.png"></li>
+            <li><img src="img/figma.png"></li>
+          </ul>
+
+          <div class="lic-edu">
+            <div>
+              <h3>LICENSE</h3>
+              <ul class="lic">
+                <li>2025.10 GTQ 포토샵 1급</li>
+                <li>2025.11 일러스트 1급</li>
+                <li>2025.01 웹디자인 기능사 필기</li>
+              </ul>
+            </div>
+            <div class="edu">
+              <h3>EDUCATION</h3>
+              <p>2026.09 - 2026.03</p>
+              <p>
+                (구) 이젠 컴퓨터 → KD 컴퓨터<br>
+                UI/UX 디자인 & 퍼블리싱 과정 수료
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    
+    <!-- SECTION 3 -->
+    <section id="port" class="section s3">
+      <h2 class="port-title">PORTFOLIO</h2>
+      <div class="fade">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="port-card">
+                <div class="port-img">
+                  <img src="img/DIPTYQUE.png" alt="portfolio">
+                </div>
+
+                <div class="port-info">
+                  <h3>DIPTYQUE</h3>
+                  <p>(반응형) DIPTYQUE FULL 페이지 구현</p>
+
+                  <a href="#" class="port-btn">View Site</a>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="swiper-slide">
+              <div class="port-card">
+                <div class="port-img">
+                  <img src="img/CNBLUE.png" alt="portfolio">
+                </div>
+
+                <div class="port-info">
+                  <h3>CNBLUE</h3>
+                  <p>(반응형) CNBLUE 공식 홈페이지 리뉴얼</p>
+
+                  <a href="#https://hyedoong2.github.io/CNBLUE" class="port-btn">View Site</a>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="swiper-slide">
+              <div class="port-card">
+                <div class="port-img">
+                  <img src="img/SPACEX.png" alt="portfolio">
+                </div>
+
+                <div class="port-info">
+                  <h3>SPACEX</h3>
+                  <p>(반응형) 스페이스엑스 홈페이지 리뉴얼</p>
+
+                  <a href="https://hyedoong2.github.io/SPACEX" class="port-btn">View Site</a>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="swiper-slide">
+              <div class="port-card">
+                <div class="port-img">
+                  <img src="img/SUBWAY.png" alt="portfolio">
+                </div>
+
+                <div class="port-info">
+                  <h3>SUBWAY</h3>
+                  <p>(반응형) 서브웨이 홈페이지 리뉴얼</p>
+
+                  <a href="#" class="port-btn">View Site</a>
+                </div>
+              </div>
+            </div>
+
+  <!-- 화살표 -->
+      <!-- <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div> -->
+
+          </div>
+        </div>
+    </section>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
+
+    <section id="contact" class="section s4">
+      <h2 class="fade">Contact</h2>
+    </section>
+
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>

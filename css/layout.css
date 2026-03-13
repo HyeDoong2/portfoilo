@@ -1,0 +1,412 @@
+@charset "utf-8";
+
+/* HEADER */
+header{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height: 40px;
+  padding: 25px;
+  color:white;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#gnb {
+  display: flex;
+  gap: 13px;
+  justify-content: space-between;
+  padding-right: 50px;
+  font-size: 16px;
+} 
+
+#gnb li a {
+  position:relative;
+}
+
+#gnb li a::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-5px;
+  width:0;
+  height:2px;
+  background:#a74955;
+  transition:0.4s;
+}
+
+#gnb li a:hover::after{
+  width:100%;
+}
+
+
+
+/* section1 */
+
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.text {
+  font-size: 10vw;
+  letter-spacing: -0.01em;
+  line-height: 100%;
+  margin: 10px;
+
+  width: 110%;
+  color: rgb(182, 182, 182, 0.2);
+  background: linear-gradient(to right, #b6b6b6, #b6b6b6) no-repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-size: 0%;
+  transition: background-size cubic-bezier(0.1, 0.5, 0.5, 1) 0.5s;
+
+  border-bottom: 1px solid #2f2b28;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+
+  animation-name: reveal;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+/*   animation-timeline: view();
+  animation-range: entry 100% cover 50%; */
+}
+
+
+@keyframes reveal {
+  to {
+    background-size: 100%;
+  }
+}
+
+span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  left: 0;
+  background-color: #ce4255;
+  color: #0d0d0d;
+
+  clip-path: polygon(0 50%, 100% 50%, 100% 50%, 0 50%);
+  transform-origin: center;
+  transition: all cubic-bezier(0.1, 0.5, 0.5, 1) 0.4s;
+
+  display: flex;
+  align-items: center;
+}
+
+.text:hover > span {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  
+}
+
+
+
+.scroll{
+position:absolute;
+bottom:40px;
+left:50%;
+transform:translateX(-50%);
+font-size:12px;
+letter-spacing:2px;
+color:#ce4255;
+animation:scroll 1.5s infinite;
+}
+
+@keyframes scroll{
+0%{transform:translate(-50%,0);}
+50%{transform:translate(-50%,10px);}
+100%{transform:translate(-50%,0);}
+}
+
+
+/* SECTION2 */
+
+
+.about-wrap{
+position:relative;
+z-index:1;
+display: flex;
+align-items: center;
+}
+
+
+/* 프로필 */
+.about-img{
+position:relative;
+width:320px;
+height:400px;
+}
+
+.about-img:hover .photo1{
+transform:scale(1.05);
+transition:0.4s;
+}
+
+.about-img:hover .color-box{
+transform:translate(-10px,10px);
+transition:0.4s;
+}
+
+
+/* 컬러 박스 */
+
+.color-box{
+position:absolute;
+width:240px;
+height:240px;
+background:#a74955;
+bottom:-40px;
+left:-40px;
+z-index:1;
+border-radius:10px;
+}
+
+
+/* 사진 */
+
+.photo1{
+width:260px;
+border-radius:15px;
+position:absolute;
+top:0;
+left:0;
+z-index:3;
+}
+
+/* 텍스트 */
+
+.about-text{
+max-width:520px;
+}
+
+.about-text h2{
+font-size:48px;
+margin-bottom:20px;
+}
+
+.about-text > p{
+line-height:1.7;
+color:#aaa;
+margin-bottom:50px;
+}
+
+
+/* SKILLS */
+
+.skills{
+display:flex;
+gap:18px;
+margin-bottom:20px;
+}
+
+.skills li img{
+width:50px;
+opacity:0.8;
+transition:0.3s;
+}
+
+.skills li:hover img{
+transform:translateY(-6px);
+opacity:1;
+}
+
+
+/* LICENSE + EDUCATION */
+
+.lic-edu{
+display:flex;
+gap:60px;
+margin-top:20px;
+}
+
+.lic li, .edu > p{
+font-size:14px;
+margin-bottom:6px;
+color:#bbb;
+}
+
+.lic li::before{
+content:"• ";
+}
+
+
+
+
+/* SECTION3 */
+.s3{
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+}
+
+
+/* 타이틀 */
+
+.port-title{
+font-size:60px;
+margin-bottom:80px;
+letter-spacing:3px;
+text-align:center;
+}
+
+
+/* swiper */
+
+.mySwiper{
+width:1200px;
+}
+
+.swiper-slide{
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+
+/* 카드 */
+
+.port-card{
+display:flex;
+width:1200px;
+height:520px;
+align-items: center;
+
+background:#1a1a1a;
+border-radius:25px;
+
+overflow:hidden;
+
+box-shadow:0 30px 80px rgba(0,0,0,0.7);
+
+transition:0.5s;
+}
+
+.port-card:hover{
+transform:translateY(-10px);
+}
+
+
+/* 이미지 */
+
+.port-img{
+width:55%;
+height:100%;
+overflow:hidden;
+padding: 50px
+}
+
+.port-img img{
+width:100%;
+height:100%;
+object-fit: contain;
+transition:0.7s;
+}
+
+.port-card:hover img{
+transform:scale(1.1);
+}
+
+
+/* 텍스트 */
+
+.port-info{
+width:45%;
+padding:80px 70px;
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+}
+
+.port-info h3{
+font-size:42px;
+margin-bottom:20px;
+letter-spacing:1px;
+}
+
+.port-info p{
+font-size:18px;
+color:#aaa;
+line-height:1.7;
+margin-bottom:40px;
+}
+
+
+/* 버튼 */
+
+.port-btn{
+display:inline-block;
+
+width:180px;
+
+padding:15px 0;
+
+text-align:center;
+
+background:#a74955;
+
+border-radius:40px;
+
+font-size:16px;
+
+letter-spacing:1px;
+
+transition:0.3s;
+}
+
+.port-btn:hover{
+background:#fff;
+color:#000;
+}
+
+.swiper-button-next,
+.swiper-button-prev{
+
+color:#fff;
+
+width:60px;
+height:60px;
+
+background:rgba(255,255,255,0.08);
+
+border-radius:50%;
+
+backdrop-filter:blur(5px);
+
+transition:0.3s;
+
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover{
+
+background:#a74955;
+
+}
+
+
+/* 화살표 아이콘 크기 */
+
+.swiper-button-next::after,
+.swiper-button-prev::after{
+
+font-size:20px;
+font-weight:bold;
+
+}
